@@ -1,0 +1,40 @@
+HTTP响应报文：web服务器程序发送给浏览器的http协议的数据
+
+---http 响应报文解析---
+---响应行（状态行）---
+HTTP/1.1 200 OK => http协议版本 状态码 状态描述
+---响应头---
+Date: Wed, 10 Dec 2025 02:57:53 GMT   => 服务器的时间
+Content-Type: text/html     => 服务器发送给浏览器的内容类型及编码格式
+Transfer-Encoding: chunked  => 服务器发送给客户端程序（浏览器）的数据不确定数据长度，
+数据发送结束的接收标识：0\r\n，Content-Length：200（字节），服务器发送给客户端程序的数据确定长度，内容长度这两个选项只能二选一
+Connection: keep-alive  => 和客户端保持长连接
+Server: nginx   => 服务器的名称
+Vary: Accept-Encoding
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Methods: GET, POST, PUT, DELETE
+Access-Control-Allow-Headers: *
+Content-Encoding: gzip
+---以下都是自定义响应头信息，字节定义响应头的名字和响应头的值，比如：is_login:True
+X-Powered-By: Express
+X-Request-ID: abc123def456
+API-Version: 2.0
+Cache-Tag: user-123
+---空行---
+\r\n
+---响应体  就是真正意义上给浏览器解析使用的数据---
+网页数据
+
+提示：对于请求头和响应头信息程序员都可以进行自定义，按照客户端和服务器约定好的方式来制定即可
+
+---http 响应报文的格式---
+响应行\r\n
+响应头\r\n
+空行\r\n
+响应体\r\n
+
+提示：每项信息之间都要有一个\r\n进行分割
+
+小结：
+一个HTTP响应报文是由响应行、响应头、空行、响应体4个部分组成
+响应行是由三个部分组成：HTTP协议版本、状态码、状态描述，最常见的状态码是200

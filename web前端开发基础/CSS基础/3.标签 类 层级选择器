@@ -1,0 +1,57 @@
+css选择器
+1.css选择器的定义
+css选择器是用来选择标签的，选出来以后给标签添加样式
+
+2.css选择器的种类
+1.标签选择器
+2.类选择器
+3.层级选择器（后代选择器）
+4.id选择器
+5.组选择器
+6.伪类选择器
+
+3.标签选择器
+根据标签来选择标签，以标签开头，此种选择器影响范围大，一般用来做一些通用设置
+<style type="text/css">
+    p{
+        color:red;
+      }
+</style>
+标签选择器，就是以标签名开头，根据标签名来选择html文件中的标签，给标签添加样式
+<div>hello</div>
+<p>hello</p>
+
+4.类选择器
+根据类名来选择标签，以.开头，一个类选择器可应用与多个标签上，一个标签上也可以使用多个类选择器
+多个类选择器需要使用空格分割，应用灵活，可复用，是css中应用最多的一种选择器
+<style type="text/css">
+    .blue{color:blue}
+    .big{font-size:20px}
+    .box{width:100px;height:100px;background:gold}
+</style>
+
+<div class="blue big box">这是个标题</div>
+
+5.层级选择器（后代选择器）
+根据层级关系选择后代标签，以选择器1选择器2开头，主要应用在标签嵌套的结构中，减少命名
+PS：层级选择器要有层级关系，根据层级关系获取子标签，给子标签添加样式
+层级选择器不一定必须是父子关系，祖孙关系的子标签也可以找到，完成添加样式的操作
+<style type="text/css">
+    div p{
+        color:red;
+        }
+    .con{width:300px;height:80px;background:green}
+    .con span{color:red}
+    .con pink{color:pink}
+    .con gold{color:gold}
+</style>
+
+<div>
+    <p>hello</p>
+</div>
+
+<div class="con">
+    <span>哈哈</span>
+    <a href="#" class="pink">百度</a>
+    <a href="#" class="gold">谷歌</a>
+</div>

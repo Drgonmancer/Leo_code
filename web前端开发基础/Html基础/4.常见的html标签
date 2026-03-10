@@ -1,0 +1,45 @@
+<!--
+提示：
+1.标签不区分大小写，但是推荐使用小写
+2.根据标签的书写形式，标签分为双标签（闭合标签）和单标签（空标签）
+    2.1 双标签是指由开始标签和结束标签组成一对标签，这种标签允许嵌套和承载内容
+    2.2 单标签是一个标签组成，没有标签内容
+-->
+
+<!-- 文档声明：html5的文档 -->
+<!DOCTYPE html>
+<!-- 当前网页的语言是英文，一般不用指定成en语言，默认不指定是中文 lang = "zh" -->
+<html lang="en">
+<head>
+    <!-- 指定网页的编码格式 -->
+    <meta charset="UTF-8">
+    <!-- 在移动设备浏览网页时，网页不缩放 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 在ie浏览器浏览网页时，使用ie的最高版本 -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- html语言里面的注释的快捷键：windows：ctr + /, mac:cmd + /-->
+    <!--双标签：成对出现的标签-->
+    <h1>我是第一级标题</h1>
+    <div>我是容器标签，可以包裹其他标签内容</div>
+    <p>我是一个段落标签</p>
+    <!-- 单标签：只有一个标签，没有标签内容-->
+    <hr>
+    <img src="imgs/logo.png" alt="图片加载失败会显示">
+    <br>
+    <!-- 带有属性标签-->
+    <a href="https://www.baidu.com">百度</a>
+    <!-- 标签可以嵌套，不能交叉嵌套-->
+    <div>
+        <p>我是一个段落标签</p>
+        <!-- 错误示例 -->
+        <!--  <p>我是一个段落标签</div>></p> -->
+    </div>
+
+    <!--HTML不区分大小写，但是推荐大家使用小写-->
+
+</body>
+</html>
+

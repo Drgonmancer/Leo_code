@@ -1,0 +1,40 @@
+﻿1.远程登录、远程拷贝命令的介绍
+ssh:远程登录
+scp:远程拷贝
+
+2.ssh命令的使用
+ssh是专门为远程登录提供的一个安全性协议，常用于远程登录，
+想要使用ssh服务，需要安装相应的服务端和客户端软件，安装好软件就可使用ssh命令并且可操作远程服务器
+
+软件安装步骤：
+1.假如Ubuntu作为服务器，安装ssh服务端软件，执行命令：sudo apt-get install openssh-server
+2.若客户端电脑如果是macOS系统则不需要安装ssh，默认安装过，可直接使用ssh命令
+3.客户端若为Windows则需安装openssh Windows软件
+
+ssh命令格式：
+ssh 用户名@ip地址
+
+apt list:查看电脑安装的所有程序
+grep openssh-server:查找指定程序是否安装
+ssh -v:查看ssh客户端软件的版本信息
+
+说明：
+在一台电脑上可以安装ssh客户端和ssh服务端软件
+在Ubuntu安装ssh客户端命令:sudo apt-get install openssh-client/sudo apt-get install openssh-server
+
+3.scp命令的使用
+scp是基于ssh进行远程文件拷贝的命令，也就是说需要保证服务器端和客户端电脑安装相应的ssh软件
+然后可以把写的代码远程拷贝到服务器
+
+scp命令格式：
+远程拷贝文件
+    scp本地文件 远程服务器用户名@远程服务器ip地址：指定拷贝到远程服务器的路径
+    scp远程服务器用户名@远程服务器IP地址：远程服务器文件 指定拷贝到本地电脑的路径
+远程拷贝目标
+    scp -r：本地目录 远程服务器用户名@远程服务器ip地址：指定拷贝到远程服务器的路径
+    scp -r：远程服务器用户名@远程服务器ip地址：远程服务器目录 指定拷贝到本地电脑的路径
+    -r：表示递归拷贝整个目录
+
+4.FileZilla软件的使用
+FileZilla是一个免费开源的FTP软件，使用可视化方式进行上传和下载文件，
+以后可以通过FileZilla来替代scp命令

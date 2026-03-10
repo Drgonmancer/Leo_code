@@ -1,0 +1,56 @@
+1.HTTP请求报文介绍
+HTTP最常见的请求报文有两种：
+    1.GET方式的请求报文
+    2.POST方式的请求报文
+说明：
+    GET:获取web服务器数据 例：获取新闻列表数据
+    POST：向web服务器提交数据 例：登录的时候把用户名和密码发送给服务器的时候
+
+2.HTTP GET请求报文分析
+---请求行---
+GET / HTTP/1.1  => 请求方法（方式）请求的资源路径 http协议的版本
+---请求头---
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,
+application/signed-exchange;v=b3;q=0.7  => 告诉服务端程序可以接受的数据类型
+Accept-Encoding: gzip, deflate, br, zstd    => 告诉服务端程序支持的压缩算法
+Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6    => 告诉服务端程序支持的语言
+Cache-Control: max-age=0
+Connection: keep-alive  => 和服务端程序保存长链接，当客户端和服务端有一段时间没有进行通信，那么服务器程序会主动向客户端断开链
+Cookie: acw_tc=0a472f8217647538145301296ecbd6f4919d11d02df6f7c3b937e42d87ae05;
+PHPSESSID=0o9hbgt2v3kk7brdagj8d5chi4;
+qimo_seosource_0=%E5%85%B6%E4%BB%96%E7%BD%91%E7%AB%99;
+qimo_seokeywords_0=%E6%9C%AA%E7%9F%A5;
+uuid_994d4130-1df9-11e9-b7ec-7766c2691ec6=931570d8-c1c7-4e13-8c47-741435b817b1;
+qimo_seosource_994d4130-1df9-11e9-b7ec-7766c2691ec6=%E5%85%B6%E4%BB%96%E7%BD%91%E7%AB%99;
+qimo_seokeywords_994d4130-1df9-11e9-b7ec-7766c2691ec6=%E6%9C%AA%E7%9F%A5;
+qimo_xstKeywords_994d4130-1df9-11e9-b7ec-7766c2691ec6=;
+href=https%3A%2F%2Fyun.itheima.com%2F;
+accessId=994d4130-1df9-11e9-b7ec-7766c2691ec6;
+parent_qimo_sid_994d4130-1df9-11e9-b7ec-7766c2691ec6=4b212474-faa8-4531-b47b-3d777b28611b;
+qimo_talking_994d4130-1df9-11e9-b7ec-7766c2691ec6=false;
+status=agentClose;
+zg_did=%7B%22did%22%3A%20%2219ae3863c1ed82-080fc20530c6dd8-4c657b58-144000-19ae3863c1f2651%22%7D;
+zg_77473f2f87b64d7cb809e494595a3f93=%7B%22sid%22%3A%201764753816609%2C%22updated%22%3A%201764754309231%2C%22info%22%3A%201764753816610%2C%22superProperty%22%3A%20%22%7B%5C%22%E5%BA%94%E7%94%A8%E5%90%8D%E7%A7%B0%5C%22%3A%20%5C%22%E8%AF%B8%E8%91%9Bio%5C%22%7D%22%2C%22platform%22%3A%20%22%7B%7D%22%2C%22utm%22%3A%20%22%7B%7D%22%2C%22
+referrerDomain%22%3A%20%22cn.bing.com%22%2C%22landHref%22%3A%20%22https%3A%2F%2Fyun.itheima.com%2F%22%7D;
+pageViewNum=8   => cookie表示的是客户端用户身份的标识
+Host: yun.itheima.com   => 通常是服务器的主机IP地址和端口号（图中为域名），如果看不到端口号默认是80
+Referer: https://cn.bing.com/
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+Sec-Fetch-User: ?1
+Upgrade-Insecure-Requests: 1    => 让客户端请求不安全请求，以后要使用https
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)
+Chrome/142.0.0.0 Safari/537.36 Edg/142.0.0.0    => 用户代理，客户端程序名称，后续爬虫的时候可以根据是否有uesr-agent进行反爬机制
+sec-ch-ua: "Chromium";v="142", "Microsoft Edge";v="142", "Not_A Brand";v="99"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+---空行---
+\r\n
+
+---http get请求报文的格式---
+请求行\r\n
+请求头\r\n
+空行（\r\n）
+
+提示：每项信息之间都需要一个\r\n,是要http协议规定

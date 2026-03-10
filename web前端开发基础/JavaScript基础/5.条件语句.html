@@ -1,0 +1,67 @@
+<!--
+1.条件语句的介绍
+条件语句就是通过条件来控制程序的走向
+
+2.条件语句语法
+2.1 if语句 - 只有当指定条件为true，使用该语句来执行代码
+2.2 if...else语句 - 当条件为true时执行代码，当条件为false时执行其他代码
+2.3 if...else if...else语句 - 使用该语句来判断多条件，执行条件成立的语句
+
+3.比较运算符
+== 等于
+=== 全等（值和类型）
+!= 不等于
+> 大于
+< 小于
+>= 大于或等于
+<= 小于或等于
+
+4.逻辑运算符
+&& and
+|| or
+! not
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var iNum = 5;
+        var iStr = "5";
+        // 在js里面如果数字和字符串进行比较，会自动把字符串转成数字类型然后再进行比较
+        if(iNum == iStr){
+            alert("条件成立");
+        }
+
+        if(iNum < iStr){
+            alert("条件成立");
+        }else{
+            alert("条件不成立")
+        }
+
+        var iScore = 80;
+
+        if (iScore < 60){
+            alert("不及格")
+        }else if (iScore <= 70){
+            alert("刚及格")
+        }else if (iScore <=80){
+            alert("一般般")
+        }else{
+            alert("优秀")
+
+        var iNum1 = 1;
+        var iNum2 = 2;
+        if(!(iNum1 > iNum2)){
+            alert("条件成立")；
+        } else{
+            alert("条件不成立")；
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!--
+1.事件代理介绍
+事件代理就是利用事件冒泡的原理（事件冒泡就是时间会向它的父级一级一级传递），把事件加到父级上，
+通过判断时间来源，执行相应的子元素的操作，事件代理首先可以极大减少事件绑定次数，提高性能，其次
+可以让新加入的子元素也可以拥有相同的操作
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- 事件冒泡，就是事件会一级一级往上（父控件）传递 -->
+    <script>
+        $(function(){
+           var $btn = $("#btn1");
+            var $div = $("div");
+            $btn.click(function(){
+                alert("我是按钮");
+                // 拓展：取消事件冒泡，就是不让事件向父级控件传递
+                // 默认是事件会进行冒泡
+                return false;
+            });
+            $div.click(function(){
+                alert("我是div");
+            });
+            // 通过事件代理，让父控件代理子控件的事件，然后执行子控件的相关操作
+            var $ul = $("div ul");
+            $ul.delegate("li","click",function(){
+                $(this).css({"color": "red"});
+            });
+            // 拓展：可以代理不同子控件的事件,多个选择器之间使用逗号进行分割即可
+            var $div1 = $("#box");
+            $div1.delegate("#p2,#btn2","click",function(){
+                alert('ok');
+            });
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <p id="p1">哈哈</p>
+        <input type="button" value="按钮" id="btn1">
+        <ul>
+            <li>哈哈</li>
+            <li>嘻嘻</li>
+            <li>美滋滋</li>
+        </ul>
+    </div>
+
+    <div id="box">
+        <p id="p2">哈哈</p>
+        <input type="button" value="按钮" id="btn2">
+    </div>
+</body>
+</html>

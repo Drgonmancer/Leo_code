@@ -1,0 +1,151 @@
+<!--
+列表标签
+1.列表标签的种类
+    1.1 无序列表标签（ul标签）
+    1.2 有序列表标签（ol标签）
+-->
+
+<ul>
+    <!-- li标签定义列表项目-->
+    <li>列表标题</li>
+</ul>
+
+<ol>
+    <!-- li标签定义列表项目-->
+    <li><a href="#">列表标题</a> </li>
+</ol>
+
+<!--强调显示的顺序使用有序列表标签，不强调顺序使用无序列表标签-->
+
+<!--
+表格标签
+1.表格的结构
+    <table>标签：表示一个表格
+    <tr>标签:表示表格中的一行
+    <td>标签：表示表格中的列
+    <th>标签：表示表格中的表头
+-->
+
+<table style="boder: 1px solid black;border-collapse:collapse">
+    <tr>
+        <th style="border: 1px solid black;">姓名</th>
+        <td style="border: 1px solid black;">张三</td>
+    </tr>
+    <!-- border-collapse：collapse 表示表格的边线进行合并-->
+</table>
+
+<!--
+表单标签
+1.表单的介绍
+表单用于搜集不同类型的用户输入（用户输入的数据），然后可以把用户数据提交到web服务器
+
+2.表单相关标签的使用
+2.1 <form>标签表示表单标签，定义整体的表单区域
+2.2 <label>标签表示表单元素的文字标注标签，定义文字标注
+2.3 <input>标签表示表单元素的用户输入标签，定义不同类型的用户输入数据方式
+    type属性
+        type="text"定义单行文本输入框
+        type="password"定义密码输入框
+        type="radio"定义单选框
+        type="checkbox"定义复选框
+        type="file"定义上传文件
+        type="submit"定义提交按钮
+        type="reset"定义重置按钮
+2.4 <textarea>标签表示表单元素的多行文本输入框标签定义多行文本输入框
+2.5 <select>标签表示表单元素的下拉列表标签定义下拉列表
+    <option>标签与<select>标签配合，定义下拉列表中的选项
+-->
+<!--
+    <p>
+        for 根据id名给指定id的标签设置光标
+    <label for="name">用户名：</label>
+    <input type="text" id="name">
+    </p>
+    <p>
+        <label>性别：</label>
+        <input type="radio">男
+        <input type="radio">女
+    </p>
+    <p>
+        <label>爱好：</label>
+        <input type="checkbox">睡觉
+        <input type="checkbox">打游戏
+    </p>
+    <p>
+        <label>玉照：</label>
+        <input type="file">睡觉
+    </p>
+    <p>
+        <label>个人描述：</label>
+        <textarea></textarea>
+    </p>
+    <p>
+        <label>籍贯：</label>
+        <select>
+            <option>北京</option>
+            <option>河北</option>
+            <option>深圳</option>
+        </select>
+    </p>
+    <p>
+        <input type="submit" value="提交">
+        <input type="reset" value="重置">
+        <input type="button" value="按钮">
+    </p>
+-->
+
+
+<!--
+表单提交
+1.表单属性设置
+<form>标签表示表单标签，定义整体的表单区域
+    action属性设置表单数据提交地址
+    method属性设置表单提交的方式，一般有“GET”方式和“POST”方式，不区分大小写
+2.表单元素属性设置
+name属性：设置表单元素的名称，该名称是提交数据时的参数名
+value属性：设置表单元素的值，该值是提交数据时参数名所对应的值
+-->
+<form action="https://www.baidu.com" method="GET">
+    <p>
+    <!-- for 根据id名给指定id的标签设置光标 -->
+        <label for="name">用户名：</label>
+        <input type="text" id="name" name="username">
+    </p>
+    <p>
+        <label>性别：</label>
+        <input type="radio" name="sex">男
+        <input type="radio" name="sex">女
+    </p>
+    <p>
+        <label>爱好：</label>
+        <input type="checkbox" name="love">睡觉
+        <input type="checkbox" name="love">打游戏
+    </p>
+    <p>
+        <label>玉照：</label>
+        <input type="file" name="pic">睡觉
+    </p>
+    <p>
+        <label>个人描述：</label>
+        <textarea name="desc"></textarea>
+    </p>
+    <p>
+        <label>籍贯：</label>
+        <select name="position">
+            <option>北京</option>
+            <option>河北</option>
+            <option>深圳</option>
+        </select>
+    </p>
+    <p>
+        <input type="submit" value="提交">
+        <input type="reset" value="重置">
+        <input type="button" value="按钮">
+    </p>
+</form>
+
+<!--get方式提交数据到web服务器以地址栏的方式提交给服务器不安全，能看到提交的数据
+严谨的说是以查询参数的方式提交给web服务器
+post方式提交数据表单数据会放到请求体里面
+但是两者数据都以http协议的方式提交数据给web服务器
+-->

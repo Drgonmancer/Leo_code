@@ -1,0 +1,45 @@
+<!--
+1.函数的定义
+函数就是可以重复使用的代码块，使用关键字function定义函数
+
+2.函数调用
+函数调用就是函数名加小括号，比如：函数名（参数[参数可选]）
+
+3.定义有参数有返回值的函数
+定义函数时，函数如果有参数，参数放到小括号里面，函数如果有返回值，返回值通过return关键字来返回
+函数中'return'关键字的作用：
+1.返回函数中的值
+2.执行完return函数执行结束
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //定义函数的关键字是function
+        function fnShow(){
+            alert('我是一个无参数无返回值的函数');
+        };
+        //调用函数执行函数里面的代码
+        fnShow()
+
+        //定义的是一个有参数有返回值的函数
+        function fnSum(iNum1,iNum2){
+            var iResult = iNum1 + iNum2;
+            return iResult
+            alert('测试代码');
+        }
+
+        var iNum = fnSum(1,2);
+        alert(iNum);
+
+        //return关键字的特点：
+        //1.可以为函数提供返回值
+        //2.当执行return语句以后函数执行结束，后面的代码不会再执行
+    </script>
+</head>
+<body>
+
+</body>
+</html>

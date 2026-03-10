@@ -1,0 +1,48 @@
+<!--
+1.定时器的介绍
+定时器就是在一段特定的时间后执行某段程序代码
+
+2.定时器的使用
+js定时器有两种创建方式：
+1.setTimeout(func[delay,param1,param2,...]):以指定的时间间隔（以毫秒计）调用一次函数的定时器
+2.setInterval(func[delay,param1,param2,...]):以指定的时间间隔（以毫秒计）重复调用一个函数的定时器
+
+setTimeout函数的参数说明：
+func：表示定时器要执行的函数名
+delay：表示时间间隔，默认是0，单位是毫秒
+param1：表示定时器执行函数的第一个参数，一次类推传入多个执行函数对应的参数
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script>
+      function fnShow(name, age){
+          alert("OK" + name + age);
+          alert(tid)
+          // 销毁定时器
+          clearTimeout(tid);
+      }
+
+      // 返回值表示创建定时器返回的id，通俗理解就是创建的第几个定时器
+      var tid = setTimeout(fnShow, 2000, '李四', 20)
+
+      function fnShowInfo(name,age){
+        alert("ok" + name + age)
+       }
+
+      function fnStop(){
+        // alert(tid);
+        // 销毁定时器
+        clearInterval(tid);
+      }
+
+      // 根据时间间隔重复函数的定时器
+      senInterval(fnShowInfo, 3000, '李四',22)
+  </script>
+</head>
+<body>
+    <input type="button" value="停止" onclick="fnStop();">
+</body>
+</html>

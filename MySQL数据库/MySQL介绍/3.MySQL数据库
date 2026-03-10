@@ -1,0 +1,70 @@
+1.MySQL数据库的介绍
+MySQL是一个关系型数据库管理系缠.在WEB应用方面，MySQL是最好的 RDBMS(关系数据库管理系统)
+应用软件，它是由瑞典MySQLAB公司开发，目前属于Oracle旗下产品，
+MySQL是最流行的关系型数据库管理系统中的一个。
+
+MySQL的特点:
+1.MySQL是开源的，所以你不需要支付额外的费用。
+2.MySQL支搏大型的数据库。可以处理拥有上千万条记录的大型数据库。
+3.MySQL使用标准的SQL数据语言形式。
+4.MySQL可以安装在不同的操作系统，并且提供多种编程语言的操作接口。
+这些缠程语言包括C、C++、Python、Java、Ruby等等。
+
+2.MySQL数据库的安装
+MySQL数据库服务端软件的安装
+MySQL数据库客户端软件的安装
+
+MySQL数据库服务端软件的安装:
+在Ubuntu中打开终端，输入下面的命令:
+sudo apt-get install mysql-server
+
+说明:
+目前大家使用的Ubuntu中已经安装好了MySQL服务端软件.无需再安装。
+显示MySQL服务端安装包信息如下:
+version:5.7.25-0ubuntu6.16.04.2
+查看MySQL服务如下:
+mysql   48220 0.0 1.4 1239468 28488 ?   Ssl 2月02    3:37    /usr/sbin/mysqld
+
+ps说明
+ps查看当前系统中的进程
+-a表示所有用户
+-U表示显示用户名
+-x表示显示所有的执行程序
+
+查看MySQL服务状态:
+sudo service nysql status I
+
+停止MySQL服务:
+sudo service mysql stop
+
+启动MySQL服务:
+udo service nysql start
+
+重启MySQL服务:
+sudo service nysql restart
+
+MySQL配置文件的介绍:
+配置文件路径为:/etc/mysql/mysql.conf.d/mysqld.cnf
+查看MySQL配置文件效果图:
+cd /etc/mysql/mysql.conf.d/
+vim mysqld.cnf  -查看mysql配置文件
+
+主要配置信息说明:
+port表示端口号:默认为3306
+bind-address表示服务器绑定的ip，默认为127.0.0.1
+datadir表示数据库保存路径，默认为/var/1ib/mysql
+log_error表示错误日志，默认为/var/log/mysq1/error.log
+
+Ps:如果对配置文件进行修改需要重启mysql数据库服务
+
+MySQL数据库客户端软件的安装:
+客户端是程序员或者dba使用的软件，通过socket方式与服务端程序通信.
+常用的MySQL数据库客户端软件有
+1.图形化界面客户端Navicat
+2.命令行客户端mysql
+
+Ps：mysql命令的使用帮助：mysql --help
+说明：
+-u:表示MySQL服务端的用户名
+-p:表示MySQL服务端的密码
+quit或者exit或者ctr+d表示退出

@@ -1,0 +1,48 @@
+<!--
+1.JavaScript对象的介绍
+JavaScript中的所有事物都是对象：字符串、数值、数组、函数等都可以认为是对象，此外，
+JavaScript允许自定义对象，对象可以拥有属性和方法
+
+2.JavaScript创建对象操作
+创建自定义JavaScript对象有两种方式：
+  通过顶级object类型来实例化一个对象
+  通过对象字面量创建一个对象
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+      // 使用顶级object类型创建自定义对象
+      var oPerson = new Object();
+      // 添加属性
+      oPerson.name = "李四"；
+      oPerson.age = 20
+      // 添加方法
+      oPerson.show = function(){
+          alert("我是一个好人");
+      };
+      // 通过对象获取属性和调用方法
+      alert(oPerson.name);
+      oPerson.show();
+
+      // 2.使用字面量创建自定义的对象
+      var oStudent = {
+          // 属性
+          name: "王五",
+          age: 20,
+          // 方法
+          show:function(){
+              alert("我是一个好学生");
+          }
+      }
+      // 通过对象获取属性和调用方法
+      alert(oStudent.name + oPerson.age);
+      oStudent.show();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

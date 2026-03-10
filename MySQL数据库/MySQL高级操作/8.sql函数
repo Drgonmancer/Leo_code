@@ -1,0 +1,119 @@
+一.日期函数
+在 SQL 中，日期函数用于处理和操作日期和时间数据。这些函数可以帮助你执行各种日期相关的操作，
+如提取日期部分、计算日期差、格式化日期等。以下是一些常用的日期函数及其用法。
+
+1. 获取当前日期和时间
+NOW()：返回当前日期和时间。
+CURDATE()：返回当前日期。
+CURTIME()：返回当前时间。
+示例：
+SELECT NOW() AS current_datetime,
+CURDATE() AS current_date, CURTIME() AS current_time;
+
+2. 提取日期部分
+YEAR(date)：提取日期的年份部分。
+MONTH(date)：提取日期的月份部分。
+DAY(date)：提取日期的日部分。
+HOUR(time)：提取时间的小时部分。
+MINUTE(time)：提取时间的分钟部分。
+SECOND(time)：提取时间的秒部分。
+
+3. 日期计算
+DATE_ADD(date, INTERVAL expr type)：在日期上加上一个时间间隔。
+DATE_SUB(date, INTERVAL expr type)：从日期中减去一个时间间隔。
+DATEDIFF(date1, date2)：计算两个日期之间的天数差。
+
+4. 格式化日期
+DATE_FORMAT(date, format)：将日期格式化为指定的格式。
+
+5. 其他日期函数
+DAYOFWEEK(date)：返回日期是星期几（1 = 星期天，2 = 星期一，...，7 = 星期六）。
+DAYOFYEAR(date)：返回日期是一年中的第几天。
+WEEK(date)：返回日期是一年中的第几周。
+LAST_DAY(date)：返回指定日期所在月份的最后一天。
+
+二、条件函数
+在 SQL 中，条件函数用于根据特定条件返回不同的值。这些函数可以帮助你在查询中实现复杂的逻辑，
+使查询结果更符合业务需求。以下是一些常用的条件函数及其用法。
+
+1. IF 函数
+IF 函数用于根据条件返回两个值中的一个。它类似于编程语言中的if-else语句。
+语法：
+IF(condition, true_value, false_value)
+condition：条件表达式。
+true_value：如果条件为TRUE，则返回的值。
+false_value：如果条件为FALSE，则返回的值。
+
+2. CASE 语句
+CASE 语句用于根据多个条件返回不同的值。它类似于编程语言中的switch-case语句。
+语法：
+CASE
+    WHEN condition1 THEN result1
+    WHEN condition2 THEN result2
+    ...
+    ELSE default_result
+END
+
+3. COALESCE 函数
+COALESCE函数用于返回参数列表中的第一个非NULL值。如果没有非NULL值，则返回NULL。
+语法：
+COALESCE(value1, value2, ...)
+
+4. NULLIF 函数
+NULLIF函数用于比较两个值，如果它们相等，则返回NULL，否则返回第一个值。
+语法：
+NULLIF(value1, value2)
+
+5. IFNULL 函数
+IFNULL 用于检查一个值是否为NULL，如果是NULL，则返回一个指定的默认值。
+语法
+IFNULL(expression, default_value)
+expression：要检查的表达式。
+default_value：如果expression为NULL，则返回的默认值。
+与其他函数的比较
+COALESCE：
+
+COALESCE 函数可以接受多个参数，并返回第一个非NULL的值。
+如果所有参数都是 NULL，则返回 NULL。
+语法：COALESCE(value1, value2, ...)。
+示例：COALESCE(salary, 0, 'Not Available')。
+IF：
+
+IF 函数用于根据条件返回两个值中的一个。
+语法：IF(condition, true_value, false_value)。
+示例：IF(salary IS NULL, 0, salary)。
+
+三、文本函数
+在 SQL 中，文本函数用于处理和操作字符串数据。这些函数可以帮助你执行各种字符串相关的操作，
+如连接字符串、提取子字符串、转换大小写等。以下是一些常用的文本函数及其用法。
+
+1. 字符串连接
+CONCAT(string1, string2, ...)：将多个字符串连接成一个字符串。
+
+2. 字符串长度
+LENGTH(string)：返回字符串的长度（以字节为单位）。
+CHAR_LENGTH(string)：返回字符串的长度（以字符为单位）。
+
+2.1.对于单字节字符（如ASCII字符），LENGTH和CHAR_LENGTH的结果是相同的。
+但对于多字节字符（如 UTF-8 编码的 Unicode 字符），LENGTH会返回更多的字节数。
+
+2.2.在处理多字节字符时，建议使用CHAR_LENGTH，因为它能更准确地反映字符串的字符数。
+
+3. 字符串大小写转换
+UPPER(string)：将字符串转换为大写。
+LOWER(string)：将字符串转换为小写。
+
+4. 字符串截取
+SUBSTRING(string, start, length)：从字符串中提取子字符串。
+
+5. 字符串替换
+REPLACE(string, search, replace)：在字符串中查找并替换指定的子字符串。
+
+6. 去除空格
+TRIM(string)：去除字符串两端的空格。
+LTRIM(string)：去除字符串左端的空格。
+RTRIM(string)：去除字符串右端的空格。
+
+7. 字符串比较
+STRCMP(string1, string2)：比较两个字符串，返回0表示相等，
+返回负数表示string1小于string2，返回正数表示string1大于string2。

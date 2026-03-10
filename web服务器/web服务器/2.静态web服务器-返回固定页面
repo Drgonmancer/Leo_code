@@ -1,0 +1,58 @@
+"""
+1.开发自己的静态web服务器
+实现步骤：
+    1.编写一个TCP服务端程序
+    2.获取浏览器发送的http请求报文数据
+    3.读取固定页面数据，把页面数据组装成HTTP响应报文数据发送给浏览器
+    4.HTTP响应报文数据发送完成以后，关闭服务于客户端的套接字
+
+2.静态web服务器-返回固定页面数据的代码示例
+"""
+
+import  socket
+from http.client import responses
+
+# 判断是否是主模块的代码
+if __name__ == '__main__':
+    # 创建tcp服务端套接字
+    tcp_server_socket = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+
+    # 设置端口号复用，程序退出端口号立即释放
+    tcp_server_socket.setsockopt(socket.SOL_SOCKET,socket.SO_REUSEADDR,True)
+    # 绑定端口号
+    tcp_server_socket.bind(("",8000))
+    # 设置监听
+    tcp_server_socket.listen(128)
+    # 循环等待接受客户端的连接请求
+    while True:
+        # 等待接受客户端的连接请求
+        new_socket, ip_port = tcp_server_socket.accept()
+        # 代码执行到此，说明连接建立成功
+        # 接受客户端的请求信息
+        recv_data = new_socket.recv(4096)
+        print(recv_data)
+
+        # 打开文件读取文案金中的数据
+        with open("static/index.html","r") as file: # 这里的file表示打开文件的对象
+            file_data = file.read()
+        # 提示：with open 关闭文件这步骤操作不用程序员来完成，系统帮我们来完成
+
+        # 响应行
+        responses_line = "HTTP/1.1 200 OK\r\n"
+        # 响应头
+        responses_header = "Server:pws/1.0\r\n"
+        # 空行
+        # 响应体
+        responses_body = file_data
+
+        # 把数据封装成http 响应报文格式的数据
+        responses = responses_line + responses_header + "\r\n" + responses_body
+
+        # 把字符串编码成二进制
+        responses_data = responses.encode("utf-8")
+
+        # 发送给浏览器的响应报文数据
+        new_socket.send(responses_data)
+
+        # 关闭服务于客户端的套接字
+        new_socket.close()

@@ -1,0 +1,66 @@
+<!--
+1.id选择器
+根据id选择标签，以#开头，元素的id名称不能重复，所以id选择器只能对应于页面上一个元素，不能复用，
+id名一般给程序使用，所以不推荐使用id作为选择器
+Ps：虽然给其他标签设置id="box"也可以设置样式，但是不推荐这样做，因为id是唯一的，
+以后js通过id只能获取一个唯一的抱歉对象
+
+2.组选择器
+根据组合的选择器选择不同的标签，以，分隔开，如果有公共的样式设置，可以使用选择器
+
+3.伪类选择器
+用于向选择器添加特殊效果，以：分割开，当用户和网站交互的时候改变显示效果可以使用伪类选择器
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        <!-- id选择器，以#开头，根据id名选择html中的标签，给标签添加样式-->
+        #myid1{
+                color:blue;
+        }
+        <!-- 组选择器就是u东哥选择器的组合，把功能的代码可以放到组选择器里面-->
+        <!-- 这里表达的意思是定义三个类选择器，他们都有同样的样式规则-->
+        .box1,.box2,.box3{
+            width:100px;
+            height:100px;
+        }
+        <!-- 提示：在CSS里面出现同样的选择器，后面的不会覆盖前面的，
+        后面的选择器会在前面的选择器的基础上进行追加样式-->
+        .box1{
+            background:red;
+        }
+        .box2{
+            background:green;
+        }
+        .box3{
+            background:blue;
+        }
+        div{
+            width:100px;
+            height:100px;
+            background:green;
+        }
+        <!-- 伪类选择器就是给其他选择器添加特殊效果，表现形式选择器后面加上冒号再跟上伪类的名字-->
+        div:hover{
+            width:200px;
+            height:200px;
+            background:red;
+        }
+    </style>
+</head>
+<body>
+    <p id="myid1">哈哈</p>
+<!--注意：html文件中标签的id是唯一的，不能重复，后续js会根据id获取对应的标签对象-->
+<!-- div.box1*3:创建三个div并且指定class属性名字是box1-->
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+</body>
+</html>

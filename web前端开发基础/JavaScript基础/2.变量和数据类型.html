@@ -1,0 +1,83 @@
+<!--
+1.定义变量
+JavaScript是一种弱类型语言（不需要给变量指定类型），也就是说不需要指定变量的类型，
+JavaScript的变量类型是由它的值来决定，定义变量需要关键字‘var’，一条JavaScript语句应该以“；”结尾
+var 变量名 = 值；
+
+2.JavaScript注释
+JavaScript的注释分为单行注释（//注释内容）和多行注释（/*多行注释*/）
+
+3.数据类型
+js中有六种数据类型，包括五种基本数据类型和一种复杂数据类型
+五种基本数据类型：
+number：数字类型
+string：字符串类型
+boolean：布尔类型true或false
+undefined：变量声明未初始化，它的值就是undefined
+null：表示空对象，如果定义的变量将来准备保存对象，可以将变量初始化为null，
+在页面上获取不到对象，返回的值就是null
+
+1种复合类型：
+object：JavaScript对象属于符合类型。例
+var object = {
+    name:"隔壁老王"
+    age:88
+    }
+
+4.变量命名规范
+4.1 区分大小写
+4.2 第一个字符必须是字母、下划线（_）或者美元符号（$）
+4.3 其他字符可以是字母、下划线、美元符或数字
+
+5.匈牙利命名风格
+对象o Object 比如：oDiv
+数组a Array 比如：altems
+字符串s String 比如：sUserName
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        // 定义数字类型的变量
+        var iNum1 = 1;
+        var fNum1 = 2.5;
+        // 定义字符串
+        var sName = "李四"
+        // 定义boolean类型
+        var bIsOk = true;
+        // 定义undefined类型
+        var unData;
+        // 定义空对象
+        var oData = null;
+        // 定义JavaScript对象类型
+        var oPerson = {
+        name:"隔壁老王"
+        age:88
+        }
+        alert(iNum1);
+        alert(fNum1);
+        alert(sName);
+        // 查看数据类型使用typeof
+        alert(typeof(iNum1));
+        alert(typeof(fNum1));
+        alert(typeof(sName));
+        alert(typeof(bIsOk));
+        alert(typeof(unData));
+        alert(typeof(oData));
+        alert(typeof(oPerson));
+        alert(typeof(oPerson.name));
+        console.log(typeof(oPerson.name));
+        // 由于js历史原因，设计之前没有null类型，并且归属于object类型，后续js迭代后没有修改
+
+        // 同时定义多个变量
+        var iNum2 = 3,sStr = '李四';
+        console.log(iNum2);
+        console.log(sStr);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

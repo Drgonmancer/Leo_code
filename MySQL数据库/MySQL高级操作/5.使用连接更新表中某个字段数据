@@ -1,0 +1,12 @@
+1.更新goods表中的商品分类信息
+我们已经创建了一个商品分类表(good_cates)，并完或了商品分类信息的插入，
+现在需要更新goods表中的商品分类信息，把商品分类名称改成商量分类id。
+
+接下来实现第二步操作:
+将goods表中的分类名称更改成商品分类表中对应的分类id
+
+--查看goods表中的商品分类名称对应的商品分类id
+select * from goods inner join good_ cates on goods.cate_name = good_cates.name;
+
+把该语句中from 后的语句理解为一张虚表
+update goods 8 inner join good_cates 8c on 8.cate_name-gc.nane set g.cate_name-gc.id;

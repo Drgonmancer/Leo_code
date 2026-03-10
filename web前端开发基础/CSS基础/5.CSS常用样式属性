@@ -1,0 +1,26 @@
+1.布局常用样式属性
+width:设置元素（标签）的宽度
+height:设置元素的高度
+background:设置元素北京色或者背景图片；background:url("imgs/logo.png")
+no-repeat:不重复显示图片，拉伸当前显示这个图片
+border:设置元素四周的边框；border:1px solid black:设置元素四周边框是1像素宽的黑色实线
+可拆成四种写法
+border-top:设置顶部边框
+border-left:设置左边边框
+border-right:设置右边边框
+border-bottom:设置底边边框
+padding:设置元素包含的内容和元素边框的距离，也叫内边距同上可以拆成四个边
+margin:设置元素和外界的距离，也叫外边距同上可以拆成四个边
+float:设置元素浮动，浮动可以让块元素排列在一行，浮动分为左浮动和右浮动
+PS：div>div*2:创建一个父div里面创建两个子div
+
+2.文本常用样式属性
+color:设置文字的颜色
+font-size:设置文字的大小
+font-family:设置文字的字体
+font-weight:设置文字是否加粗
+font-height:设置文字的行高
+text-decoration:设置文字的下划线；underline、overline、line-through
+text-align:设置文字水平对齐方式
+text-indent:设置文字首行缩进
+PS:span标签可以给文本中的一小段内容设置样式

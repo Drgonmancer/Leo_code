@@ -1,0 +1,29 @@
+1.索引的介绍
+索引在MySQL中也叫做“键”，它是一个特殊的文件，它保存着数据表里所有记录的位置信息，更通俗的来说，
+数据库索引好比是一本书前面的目录，能加快数据库的查询速度。
+
+应用场景:
+当数据库中数据量很大时，查找数据会变得很慢，我们就可以通过索引来提高数据库的查询效率。
+
+2.索引的使用
+查看表中已有索引:
+show index from 表名;
+
+说明:
+主键列会自动创建索引
+
+索引的创建:
+-- 创建索引的语法格式
+alter table 表名 add index 索引名[可选](列名,..)
+--给name字段添加索引
+alter table classes add index my_ name (name);
+
+说明:
+索引名不指定，默认使用字段名
+
+索引的删除:
+--删除索引的语法格式
+alter table 表名 drop index 索引名
+--如果不知道索引名·可以查看创表sql语句
+show create table classes;
+alter table classes drop index my_name;

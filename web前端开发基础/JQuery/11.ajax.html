@@ -1,0 +1,77 @@
+<!--
+1.ajax的介绍
+ajax一个前后台配合的技术，它可以让JavaScript发送异步的http请求，与后台通信进行数据的获取，
+ajax最大的有点是实现局部刷新，ajax可以发送http请求，当获取到后台数据的时候更新页面显示数据实现局部刷新，
+当前端页面想和后台服务器进行数据交互就可以使用ajax了
+在html页面使用ajax需要在web服务器环境下运行，一般向自己的web服务器发送ajax请求
+
+2.ajax的使用
+jQuery将它封装成了一个方法$.ajax(),可以直接用这个方法来执行ajax请求
+ajax方法的参数说明：
+1.url请求地址
+2.type请求方式：默认是'GET'，常用的还有'POST'
+3.dataType:设置返回的数据格式，常用的是'json'格式
+4.data设置发送给服务器的数据，没有参数不需要设置
+5.success设置请求成功后的回调函数
+6.error：设置请求失败后的回调函数
+7.async：设置是否异步，默认值是'true'，表示异步，一般不用写
+8.同步和异步说明
+    同步是一个ajax请求完成另外一个才可以请求，需要等待上一个ajax请求完成，好比线程同步
+    异步是多个ajax同时请求，不需要等待其它ajax请求完成，好比线程异步
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jQuery-1.12.4.min.js"></script>
+    <script>
+        // 向web服务器发送ajax请求，本质上是一个http协议的请求
+        $.ajax({
+            // 请求的资源地址，不指定ip地址和端口号表示请求的是自己的服务器资源数据
+            url:"data.json",
+            // 请求方式：GET,POST
+            type:"GET"
+            // 指定对服务器数据的解析格式
+            dataType:"JSON",
+            // data: 表示发送给web服务器的参数
+            // 请求成功执行的函数
+            success:function(data){
+                console.log(data.name);
+                // 数据请求回来以后可以绑定给html中的某个标签控件，实现局部刷新
+            },
+            // 请求失败执行的函数
+            error:function(){
+
+            },
+            // 是否使用异步，默认不指定表示是异步请求
+            async:true
+        });
+
+        // 发送get方式的ajax请求的简写方式
+        // 1.请求的地址
+        // 2.请求传给web服务器的参数
+        // 3.请求成功的回调函数
+        // 4.返回数据的解析方式
+        // 5.error失败执行的回调函数
+        $.get("data.json"),{"name":"ls"},function(data){
+            // 如果按照json格式进行数据，js这块能得到一个JavaScript
+             alert(data.name);
+        },"JSON").error(function(){
+            alert("网络异常，请求失败");
+        });
+        // 只能在内置浏览器中执行post
+        // 这里没有指定http协议头和ip地址和端口号，那么默认ajax请求会自动加上
+        // 如果请求的是自己的web服务器数据可以不加http协议地址，请求别的服务器数据要加上http协议地址
+        $.post("data.json"),{"name":"ls"},function(data){
+            // 如果按照json格式进行数据，js这块能得到一个JavaScript
+             alert(data.name);
+        },"JSON").error(function(){
+            alert("网络异常，请求失败");
+        });
+    </script>
+</head>
+<body>
+
+</body>
+</html>

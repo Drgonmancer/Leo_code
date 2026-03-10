@@ -1,0 +1,95 @@
+"""
+1.思考
+如何实现将100000条数据插入到MySQL数据库?
+
+答案:
+如果使用之前学习的MySQL客户端来完成这个操作，那么这个工作量无疑是巨大的，我们可以通过使用
+程序代码的方式去连接MySQL数据库，然后对MySQL数据库进行增删改查的方式，实现10000条数据的插入，
+像这样使用代码的方式操作数据库就称为数据库编程。
+
+2.Python程序操作MySQL数据库
+安装pymysql第三方包:
+sudo pip3 install pymysql  - pip3（包管理工具）
+
+说明:
+安装命令使用 sudo pip3 install 第三方包名
+卸载命令使用 sudo pip3 uninstall 第三方包
+
+现在使用的虚拟机已经安装了这个第三方包，可以使用:pip3 show pymysql命令查看第三方包的信息
+pip3 list查看使用pip命令安装的第三方包列表
+
+pymysql的使用:
+ 1.导入pymysql包
+import pymysql
+
+# 2.创建连接对象
+调用pymysql模块中的connect()函数來创建连接对象,代码如下:
+
+conn=connect(参数列表)
+    参数host:连接的mysql主机,如果本机是'localhost'
+    参数port:连接的mysql主机的端口，默认是3386
+    参数user:连接的用户名
+    参数password:连接的密码
+    参数database:数据库的名称
+    参数charset:通信采用的编码方式，推荐使用utf8
+
+连接对象操作说明:
+    关闭连接 conn.close()
+    提交数据 conn.commit)
+    撤销数据 conn.rollback)
+
+3.获取游标对象
+获取游标对象的目标就是要执行sql语句，完成对数据库的增、删、改、查操作。代码如下:
+# 调用连接对象的cursor()方法获取游标对象
+cur =conn.cursor()
+
+游标操作说明:
+    1.使用游标执行SQL语句:execute(operation [parameters])执行SQL语句，
+    返回受影响的行数，主要用于执行insert、update、delete、select等语句
+    2.获取查询结果集中的一条数据:cur.fetchone()返回一个元组，如(1,张三)
+    3.获取查询结果集中的所有数据:cur.fetchall()返回一个元组,如((1,'张三),(2，'李四'))
+    4.关闭游标:cur.close(),表示和数据库操作完成
+
+4.pymysql完成数据的查询操作
+
+5.pymysql完成对数据的增删改
+
+"""
+
+# 1.导包
+import pymysql
+from pymysql import connect, Connect, Connection
+
+# 2.创建连接对象
+# conn =  Connection = Connect
+# 本质上是一个函数，使用这三个里面的任何一个函数都可以创建一个连接对象
+# 1.host:服务器的主机地址
+# 2.port:mysql数据库的端口号
+# 3.user:用户名
+# 4.password:密码
+# 5.database:操作的数据库
+# 6.charset:操作数据库使用的编码格式
+conn = pymysql.connect(host="localhost",
+                       port=3306,
+                       user="root",
+                       password="mysql",
+                       database="python41",
+                       charset="utf-8")
+
+# 3.获取游标，目的就是要执行sql语句
+cursor = conn.cursor()
+# 准备sql，之前在mysql客户端如何编写sql，在python程序里面还怎么编写
+sql = "select * from students";
+
+# 4.执行sql语句
+cursor.execute(sql)
+# 获取查询的结果,返回的类型是元组，其中元组里面的每条数据也是元组
+# row = cursor.fetchone()
+# print(row)
+result = cursor.fetchall()
+for row in result:
+    print(row)
+# 5.关闭游标
+cursor.close()
+# 6.关闭连接
+conn.close()

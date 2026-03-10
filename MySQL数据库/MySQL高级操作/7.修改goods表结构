@@ -1,0 +1,16 @@
+修改goods表结构
+目前我们已经把good表中的商品分类和品牌信息已经更改成了商品分类id和品牌id,接下来需要把
+cate_name 和 brand_name 字段分别改成 cate_id和 brand_id字段,类型都改成int类型
+
+--查看表结构
+desc goods;
+
+--通过alter table语句修改表结构
+alter table goods change cate_name cate id int not null, change brand_name
+brand_id int not nul:
+
+说明:
+alert table可以同时修改多个字段信息
+
+小结:
+修改表结构可以使用:alter table语句，多个修改字段之间使用逗号分隔

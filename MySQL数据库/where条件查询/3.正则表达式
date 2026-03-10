@@ -1,0 +1,111 @@
+正则表达式可以通过 REGEXP 或 RLIKE 运算符来使用。
+这两个运算符是等效的，可以互换使用。
+MySQL支持的正则表达式语法与Perl兼容的正则表达式（PCRE）类似，
+但有一些限制和特定的字符集处理方式。
+
+基本语法
+SELECT column1, column2, ...
+FROM table_name
+WHERE column_name REGEXP 'pattern';
+
+常用的正则表达式模式
+1.匹配特定字符:
+SELECT device_id, gender, age, gpa
+FROM user_profile
+WHERE email REGEXP 'example';
+这个查询会匹配所有 email 字段中包含 example 的记录。
+
+2.匹配开头或结尾:
+2.1 开头匹配 ^:
+SELECT device_id, gender, age, gpa
+FROM user_profile
+WHERE email REGEXP '^example';
+这个查询会匹配所有 email 字段以 example 开头的记录。
+
+2.2结尾匹配 $:
+SELECT device_id, gender, age, gpa
+FROM user_profile
+WHERE email REGEXP 'example$';
+这个查询会匹配所有 email 字段以 example 结尾的记录。
+
+3.匹配特定字符集:
+3.1 [abc] 匹配 a、b 或 c 中的任意一个字符:
+SELECT device_id, gender, age, gpa
+FROM user_profile
+WHERE email REGEXP '[abc]';
+这个查询会匹配所有 email 字段中包含 a、b 或 c 的记录。
+
+3.2 [^abc] 匹配除了 a、b 和 c 之外的任意字符:
+SELECT device_id, gender, age, gpa
+FROM user_profile
+WHERE email REGEXP '[^abc]';
+这个查询会匹配所有 email 字段中包含除了 a、b 和 c 之外的任意字符的记录。
+
+4.匹配重复字符:
+4.1 a* 匹配零个或多个 a:
+SELECT device_id, gender, age, gpa
+FROM user_profile
+WHERE email REGEXP 'a*';
+这个查询会匹配所有 email 字段中包含零个或多个 a 的记录。
+
+4.2 a+ 匹配一个或多个 a:
+SELECT device_id, gender, age, gpa
+FROM user_profile
+WHERE email REGEXP 'a+';
+这个查询会匹配所有 email 字段中包含一个或多个 a 的记录。
+
+4.3 a? 匹配零个或一个 a:
+SELECT device_id, gender, age, gpa
+FROM user_profile
+WHERE email REGEXP 'a?';
+这个查询会匹配所有 email 字段中包含零个或一个 a 的记录。
+
+4.4 a{3} 匹配三个 a:
+SELECT device_id, gender, age, gpa
+FROM user_profile
+WHERE email REGEXP 'a{3}';
+这个查询会匹配所有 email 字段中包含三个连续 a 的记录。
+
+5.匹配任意字符:
+5.1匹配任意单个字符（除了换行符）:
+SELECT device_id, gender, age, gpa
+FROM user_profile
+WHERE email REGEXP 'a.c';
+这个查询会匹配所有 email 字段中包含 a 后跟任意一个字符再跟 c 的记录。
+
+6.字符类:
+6.1 \d 匹配数字（相当于 [0-9]）:
+SELECT device_id, gender, age, gpa
+FROM user_profile
+WHERE email REGEXP '\\d';
+这个查询会匹配所有 email 字段中包含数字的记录。
+
+6.2 \D 匹配非数字（相当于 [^0-9]）:
+SELECT device_id, gender, age, gpa
+FROM user_profile
+WHERE email REGEXP '\\D';
+这个查询会匹配所有 email 字段中包含非数字的记录。
+
+6.3 \w 匹配字母、数字或下划线（相当于 [a-zA-Z0-9_]）:
+SELECT device_id, gender, age, gpa
+FROM user_profile
+WHERE email REGEXP '\\w';
+这个查询会匹配所有 email 字段中包含字母、数字或下划线的记录。
+
+6.4 \W 匹配非字母、数字或下划线（相当于 [^a-zA-Z0-9_]）:
+SELECT device_id, gender, age, gpa
+FROM user_profile
+WHERE email REGEXP '\\W';
+这个查询会匹配所有 email 字段中包含非字母、数字或下划线的记录。
+
+6.5 \s 匹配空白字符（包括空格、制表符、换行符等）:
+SELECT device_id, gender, age, gpa
+FROM user_profile
+WHERE email REGEXP '\\s';
+这个查询会匹配所有 email 字段中包含空白字符的记录。
+
+6.6 \S 匹配非空白字符:
+SELECT device_id, gender, age, gpa
+FROM user_profile
+WHERE email REGEXP '\\S';
+这个查询会匹配所有 email 字段中包含非空白字符的记录。

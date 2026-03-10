@@ -1,0 +1,69 @@
+<!--
+1.数据的介绍
+数据就是一组数据的集合，JavaScript中，数组里面的数据可以是不同类型的数据，好比python里面的列表
+
+2.数组的定义
+3.多维数组
+4.数组的操作
+    4.1 获取数组的长度
+    4.2 根据下标取值
+    4.3 从数组最后添加和删除数据
+    4.4 根据下标添加和删除元素
+    arr.splice(start,num,element,...,elementN)
+    参数解析：
+    1.start：必需，开始删除的索引
+    2.num：可选，删除数组元素的个数
+    3.elementN：可选，在start索引位置要插入的新元素
+    此方法会删除从start索引开始的num个元素，并将elementN参数插入到start索引位置
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        // 定义数组
+        var aArray1 = new Array(1,2,3);
+        console.log(aArray1);
+        // 字面量方式创建，相当于直接赋值一个数组，数组的表现形式是一对中括号
+        var aArray2 = [3,6,9];
+        console.log(aArray2);
+        alert(aArray2);
+        // 多维数组
+        var aArray3 = [[1,2,3],[3,6,9]];
+        console.log(aArray3);
+        // 根据下标获取数据
+        alert(aArray3[0][1]);
+        // 演示数组的相关操作
+        var aArray4 = [3,6,9];
+        // 获取数组的长度(个数)
+        alert(aArray4.length);
+        // 根据下标取值
+        alert(aArray4[2]);
+        // js里面不支持负数下标
+        alert(aArray4[-1]);
+        // 根据下标修改数据
+        aArray4[1] = 26
+        console.log(aArray4);
+        // 追加数据
+        aArray4.push('hello');
+        console.log(aArray4);
+        // 删除最后一个元素，这里pop不支持根据下标删除
+        var oValue = aArray4.pop()
+        console.log(oValue);
+        console.log(aArray4);
+        // 插入数据
+        // 1.开始删除的索引
+        // 2.删除的个数
+        // 3.插入的数据
+        aArray4.splice(2,2)
+        console.log(aArray4);
+        aArray4.splice(1,0,'鸭梨','香蕉')；
+        console.log(aArray4);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

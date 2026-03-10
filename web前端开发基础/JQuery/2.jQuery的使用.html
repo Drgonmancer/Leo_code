@@ -1,0 +1,48 @@
+<!--
+1.jQuery的引入
+2.jQuery的入口函数
+jQuery 的入口函数是在 html 所有标签(DOM)都加载之后，就会去执行。
+可通过给onload事件属性设置了一个函数来获取标签元素，
+而jQuery提供了ready函数保证获取标签元素没有问题，速度比原生的window.onload更快
+
+load和ready区别
+load：必须等待网页全部加载完成（包括图片等），然后再执行包裹代码，一般只执行一次若再执行前次会被覆盖
+ready：只需要等待网页中的DOM结构加载完毕，就能执行包裹的代码，可多次执行不会被覆盖
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- 导入jQuery对应的js文件-->
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <!-- 使用jQuery代码需要重新开一个script标签-->
+    <script>
+        // 原生js写法
+        window.onload = function(){
+            // 当前页面的标签和标签使用的资源都加载完成，onload事件才会触发
+            var oDiv = document.getElmentById("div1");
+            alert(oDiv);
+        };
+        // $符号是jQuery的象征
+        // $ 本质就是函数，只不过这个函数名($)
+        $(document).ready(function(){
+            // 获取标签和css样式匹配标签的规则一样
+            // 以后使用jQuery，变量名都要以$符号开头
+            var $div = $("#div1"); // id为div1的元素
+            alert($div)
+        });
+
+        // jQuery的简写方式
+        $(function(){
+            var $div = $("#div1");
+            alert($div)
+        })
+
+        // ready 等待页面标签加载完成以后就执行ready事件，不会等待资源术加载完成
+    </script>
+</head>
+<body>
+    <div id="div1">哈哈</div>
+</body>
+</html>
