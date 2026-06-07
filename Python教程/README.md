@@ -43,7 +43,16 @@ npx serve . -p 3000
 
 ### 部署到 GitHub Pages
 
-将 `Python教程` 文件夹设为 Pages 源目录，或使用 `gh-pages` 分支部署即可。
+推送 `main` 分支后，GitHub Actions 会自动将 `Python教程/` 发布到 `gh-pages` 分支。
+
+**首次需手动开启**（只需一次）：
+
+1. 打开 https://github.com/Drgonmancer/Leo_code/settings/pages
+2. **Build and deployment** → **Source** 选 **Deploy from a branch**
+3. **Branch** 选 `gh-pages`，目录选 `/ (root)`
+4. 点击 **Save**
+
+访问地址：https://drgonmancer.github.io/Leo_code/
 
 ---
 

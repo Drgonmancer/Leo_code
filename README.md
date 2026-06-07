@@ -6,6 +6,8 @@ Python 全栈学习笔记与代码仓库。
 
 **在线阅读**：https://drgonmancer.github.io/Leo_code/
 
+> 首次部署需在仓库 [Settings → Pages](https://github.com/Drgonmancer/Leo_code/settings/pages) 中设置：**Deploy from a branch** → 分支选 `gh-pages` → 目录选 `/ (root)` → Save。
+
 左侧目录导航，点击即可跳转到对应章节，共 8 大篇章。
 
 ### 本地预览
