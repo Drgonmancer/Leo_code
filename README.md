@@ -1,16 +1,18 @@
-# Leo_code
+# Leo_code · main 分支
 
-Python 全栈学习笔记与代码仓库。
+> 你当前在 **`main` 分支** — 这是源码与学习笔记的主分支。  
+> 在线文档由 `gh-pages` 分支自动发布，请勿直接修改 `gh-pages`。
 
-## 📖 Python 全栈入门教程（在线文档）
+## 快速开始
 
-**在线阅读**：https://drgonmancer.github.io/Leo_code/
+| 你想做什么 | 去哪里 |
+|-----------|--------|
+| 在线阅读教程（左侧目录导航） | https://drgonmancer.github.io/Leo_code/ |
+| 本地预览文档站 | 见下方「本地预览」 |
+| 修改教程内容 | 编辑 `Python教程/` 后推送到 `main` |
+| 查看原始笔记与代码 | 浏览下方各章节目录 |
 
-> 首次部署需在仓库 [Settings → Pages](https://github.com/Drgonmancer/Leo_code/settings/pages) 中设置：**Deploy from a branch** → 分支选 `gh-pages` → 目录选 `/ (root)` → Save。
-
-左侧目录导航，点击即可跳转到对应章节，共 8 大篇章。
-
-### 本地预览
+## 本地预览
 
 ```powershell
 Set-Location "Python教程"
@@ -19,11 +21,37 @@ python -m http.server 3000
 
 浏览器打开 http://localhost:3000
 
-### 仓库结构
+## main 分支目录
 
-| 目录 | 说明 |
+```
+main/
+├── Python教程/          ← 文档站源码（Docsify，推 main 后自动部署）
+├── Python基础语法/      ← 原始笔记与练习代码
+├── Python面向对象编程/
+├── Linux命令/
+├── web服务器/
+├── 多任务编程/
+├── web前端开发基础/
+├── MySQL数据库/
+├── Redis数据库/
+├── 项目部署/
+├── Git/
+└── .github/workflows/   ← 推送 main 时自动发布到 gh-pages
+```
+
+## 分支说明
+
+| 分支 | 用途 |
 |------|------|
-| `Python教程/` | Docsify 在线文档站（推荐阅读） |
-| `Python基础语法/` | 原始笔记与代码 |
-| `Python面向对象编程/` | 原始笔记与代码 |
-| 其他章节目录 | 各专题学习资料 |
+| `main` | 源码主分支，在此编辑与提交 |
+| `gh-pages` | 由 GitHub Actions 自动生成，承载在线文档，**不要手动修改** |
+
+## 更新在线文档
+
+```powershell
+git add Python教程/
+git commit -m "更新教程内容"
+git push origin main
+```
+
+推送后 Actions 会自动将 `Python教程/` 同步到 `gh-pages`，约 1～2 分钟生效。
