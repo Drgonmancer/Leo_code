@@ -3,93 +3,70 @@
 <head>
   <meta charset="UTF-8">
   <title>Python 全栈入门教程</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-  <meta name="description" content="Python 全栈入门教程 - 从零到实战，8 大篇章边学边练">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="Python 全栈入门教程 - 8 大篇章边学边练">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
   <style>
     :root { --theme-color: #42b983; }
     .sidebar-nav > ul > li > p { font-weight: 600; }
-    .markdown-section img {
-      max-width: 100%;
-      border-radius: 6px;
-      box-shadow: 0 2px 12px rgba(0,0,0,.08);
-    }
+    .markdown-section img { max-width: 100%; border-radius: 6px; }
   </style>
 </head>
 <body>
-  <div id="app">加载中...</div>
+  <div id="app"></div>
   <script>
-    (function () {
-      var repo = 'Leo_code';
-      var onGithubPages = location.hostname.indexOf('github.io') > -1;
-      window.__DOCSIFY_BASE__ = onGithubPages ? '/' + repo + '/' : '/';
-    })();
-
+    // 参考 DataWhale llm-universe：极简配置，不手动设置 basePath / relativePath
     window.$docsify = {
       name: 'Python 全栈入门教程',
-      nameLink: '/',
       repo: 'https://github.com/Drgonmancer/Leo_code',
-      basePath: window.__DOCSIFY_BASE__,
       homepage: 'README.md',
       loadSidebar: true,
-      loadNavbar: true,
-      subMaxLevel: 4,
       auto2top: true,
-      coverpage: true,
-      onlyCover: false,
-      mergeNavbar: true,
+      subMaxLevel: 3,
       maxLevel: 4,
-      routerMode: 'hash',
       alias: {
         '/.*/_sidebar.md': '/_sidebar.md',
-        '/.*/_navbar.md': '/_navbar.md'
-      },
-      search: {
-        paths: 'auto',
-        placeholder: '搜索教程...',
-        noData: '没有找到结果',
-        depth: 4
+        '/C1/(.*)': '/01-Python基础语法/$1',
+        '/C2/(.*)': '/02-Python面向对象编程/$1',
+        '/C3/(.*)': '/03-Linux命令/$1',
+        '/C4/(.*)': '/04-Web服务器/$1',
+        '/C5/(.*)': '/05-多任务编程/$1',
+        '/C6/(.*)': '/06-Web前端开发基础/$1',
+        '/C7/(.*)': '/07-MySQL数据库/$1',
+        '/C8/(.*)': '/08-Redis数据库/$1',
+        '/附录/(.*)': '/99-附录-项目部署/$1'
       },
       pagination: {
         previousText: '上一节',
-        nextText: '下一节',
-        crossChapter: true,
-        crossChapterText: '章节'
+        nextText: '下一节'
       },
       copyCode: {
         buttonText: '复制',
-        errorText: '错误',
         successText: '已复制'
       },
       plugins: [
-        function(hook) {
-          var base = window.__DOCSIFY_BASE__;
-
-          // 统一资源路径：配图始终从站点根目录加载
+        function(hook, vm) {
           hook.beforeEach(function(content) {
+            // 配图统一走站点根目录，避免深层目录相对路径错乱
+            var base = vm.config.basePath || '/';
             return content
               .replace(/\]\(\.\.\/assets\//g, '](' + base + 'assets/')
               .replace(/!\[([^\]]*)\]\(\.\.\/assets\//g, '![$1](' + base + 'assets/')
               .replace(/!\[([^\]]*)\]\(assets\//g, '![$1](' + base + 'assets/');
           });
-
         }
       ]
     };
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/docsify@4"></script>
-  <script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/docsify-copy-code@2"></script>
-  <script src="https://cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-sql.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-json.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-markdown.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/docsify-mermaid@2/dist/docsify-mermaid.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code@2"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-pagination@2/dist/docsify-pagination.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-sql.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-mermaid@2/dist/docsify-mermaid.js"></script>
   <script>mermaid.initialize({ startOnLoad: true, theme: 'default' });</script>
 </body>
 </html>

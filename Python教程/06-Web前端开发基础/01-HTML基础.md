@@ -131,6 +131,6 @@ HTML 负责网页的**骨架**。下一节用 CSS 给它「穿上衣服」。
 
 | ← 上一章 | [第六章目录](./README.md) | 下一节 → |
 |---------|--------------------------|---------|
-| [第五章 多任务](05-多任务编程/README.md) | | [6.2 CSS 基础](./02-CSS基础.md) |
+| [第五章 多任务](C5/README.md) | | [6.2 CSS 基础](./02-CSS基础.md) |
 
 *源码：[`web前端开发基础/Html基础/`](https://github.com/Drgonmancer/Leo_code/tree/main/web前端开发基础/Html基础)*
