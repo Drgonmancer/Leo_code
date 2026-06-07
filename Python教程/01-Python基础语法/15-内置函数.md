@@ -8,7 +8,7 @@
 
 </div>
 
-![Python 基础语法](../assets/ch01-python-basics.png)
+![Python 基础语法](assets/ch01-python-basics.png)
 
 ---
 

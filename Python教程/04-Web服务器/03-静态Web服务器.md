@@ -8,7 +8,7 @@
 
 </div>
 
-![Web 服务器](../assets/ch04-web-server.png)
+![Web 服务器](assets/ch04-web-server.png)
 
 ---
 

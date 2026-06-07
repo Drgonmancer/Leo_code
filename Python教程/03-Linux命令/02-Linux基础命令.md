@@ -8,7 +8,7 @@
 
 </div>
 
-![常用 Linux 命令](../assets/ch03-linux-commands.png)
+![常用 Linux 命令](assets/ch03-linux-commands.png)
 
 ---
 

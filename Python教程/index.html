@@ -8,41 +8,29 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css">
   <style>
-    :root {
-      --theme-color: #42b983;
-    }
-    .sidebar-nav > ul > li > p {
-      font-weight: 600;
-    }
+    :root { --theme-color: #42b983; }
+    .sidebar-nav > ul > li > p { font-weight: 600; }
     .markdown-section img {
       max-width: 100%;
       border-radius: 6px;
       box-shadow: 0 2px 12px rgba(0,0,0,.08);
-    }
-    .app-name-link img {
-      width: 32px;
-      height: 32px;
-      vertical-align: middle;
-      margin-right: 8px;
     }
   </style>
 </head>
 <body>
   <div id="app">加载中...</div>
   <script>
-    // GitHub Pages 项目站部署在 /Leo_code/ 子路径，本地预览在根路径
     (function () {
       var repo = 'Leo_code';
-      var isGithubPages = location.hostname.indexOf('github.io') > -1;
-      window.__DOCSIFY_BASE__ = isGithubPages ? '/' + repo + '/' : '/';
+      var onGithubPages = location.hostname.indexOf('github.io') > -1;
+      window.__DOCSIFY_BASE__ = onGithubPages ? '/' + repo + '/' : '/';
     })();
 
     window.$docsify = {
       name: 'Python 全栈入门教程',
-      nameLink: window.__DOCSIFY_BASE__,
+      nameLink: '/',
       repo: 'https://github.com/Drgonmancer/Leo_code',
       basePath: window.__DOCSIFY_BASE__,
-      relativePath: true,
       homepage: 'README.md',
       loadSidebar: true,
       loadNavbar: true,
@@ -52,9 +40,10 @@
       onlyCover: false,
       mergeNavbar: true,
       maxLevel: 4,
+      routerMode: 'hash',
       alias: {
-        '/.*/_sidebar.md': window.__DOCSIFY_BASE__ + '_sidebar.md',
-        '/.*/_navbar.md': window.__DOCSIFY_BASE__ + '_navbar.md'
+        '/.*/_sidebar.md': '/_sidebar.md',
+        '/.*/_navbar.md': '/_navbar.md'
       },
       search: {
         paths: 'auto',
@@ -66,7 +55,7 @@
         previousText: '上一节',
         nextText: '下一节',
         crossChapter: true,
-        crossChapterText: '章节',
+        crossChapterText: '章节'
       },
       copyCode: {
         buttonText: '复制',
@@ -75,30 +64,30 @@
       },
       plugins: [
         function(hook) {
-          hook.beforeEach(function(html) {
-            return html;
+          var base = window.__DOCSIFY_BASE__;
+
+          // 统一资源路径：配图始终从站点根目录加载
+          hook.beforeEach(function(content) {
+            return content
+              .replace(/\]\(\.\.\/assets\//g, '](' + base + 'assets/')
+              .replace(/!\[([^\]]*)\]\(\.\.\/assets\//g, '![$1](' + base + 'assets/')
+              .replace(/!\[([^\]]*)\]\(assets\//g, '![$1](' + base + 'assets/');
           });
+
         }
       ]
     };
   </script>
-  <!-- Docsify -->
   <script src="https://cdn.jsdelivr.net/npm/docsify@4"></script>
-  <!-- 搜索 -->
   <script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
-  <!-- 代码复制 -->
   <script src="https://cdn.jsdelivr.net/npm/docsify-copy-code@2"></script>
-  <!-- 分页 -->
   <script src="https://cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
-  <!-- 侧边栏折叠 -->
   <script src="https://cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
-  <!-- 代码高亮 -->
   <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-sql.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-json.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-markdown.min.js"></script>
-  <!-- Mermaid 图表 -->
   <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/docsify-mermaid@2/dist/docsify-mermaid.js"></script>
   <script>mermaid.initialize({ startOnLoad: true, theme: 'default' });</script>

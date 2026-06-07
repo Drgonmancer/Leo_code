@@ -8,7 +8,7 @@
 
 </div>
 
-![Redis 数据库](../assets/ch08-redis.png)
+![Redis 数据库](assets/ch08-redis.png)
 
 ---
 

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Python 全栈入门教程</title>
+  <script>
+    // GitHub Pages SPA 回退：将未知路径重定向到 index.html
+    var base = location.pathname.indexOf('/Leo_code') > -1 ? '/Leo_code/' : '/';
+    var redirect = base + location.search + location.hash;
+    sessionStorage.setItem('redirect', location.href);
+    location.replace(base);
+  </script>
+</head>
+<body></body>
+</html>

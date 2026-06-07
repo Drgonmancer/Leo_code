@@ -8,7 +8,7 @@
 
 </div>
 
-![Web 前端三层结构](../assets/ch06-web-frontend.png)
+![Web 前端三层结构](assets/ch06-web-frontend.png)
 
 ---
 

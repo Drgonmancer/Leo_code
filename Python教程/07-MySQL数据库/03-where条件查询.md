@@ -8,7 +8,7 @@
 
 </div>
 
-![MySQL 数据库](../assets/ch07-mysql.png)
+![MySQL 数据库](assets/ch07-mysql.png)
 
 ---
 
