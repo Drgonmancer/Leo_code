@@ -165,4 +165,4 @@ mv main_backup.py backup/main.py
 |---------|--------------------------|---------|
 | [3.1 入门](./01-操作系统与Linux入门.md) | | [3.3 高级命令](./03-Linux高级命令.md) |
 
-*源码：[`Linux命令/2.Linux基础命令`](../../Linux命令/2.Linux基础命令)*
+*源码：[`Linux命令/2.Linux基础命令`](https://github.com/Drgonmancer/Leo_code/tree/main/Linux命令/2.Linux基础命令)*

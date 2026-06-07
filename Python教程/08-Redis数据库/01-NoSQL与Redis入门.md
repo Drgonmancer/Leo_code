@@ -34,7 +34,7 @@ flowchart LR
 | 启动与连接 Redis | `redis-server` `redis-cli` |
 | 第一个 set/get | 字符串操作 |
 
-> 📂 本章对应源码：[Redis数据库/](../../Redis数据库/)
+> 📂 本章对应源码：[Redis数据库/](https://github.com/Drgonmancer/Leo_code/tree/main/Redis数据库)
 
 ---
 
@@ -276,4 +276,4 @@ ttl session:1001
 |---------|--------------------------|---------|
 | — | | [8.2 Redis 命令与数据结构](./02-Redis命令与数据结构.md) |
 
-*源码：[`Redis数据库/`](../../Redis数据库/)*
+*源码：[`Redis数据库/`](https://github.com/Drgonmancer/Leo_code/tree/main/Redis数据库)*

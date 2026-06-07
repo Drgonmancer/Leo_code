@@ -324,4 +324,4 @@ oDiv.innerHTML = "<a href='http://www.baidu.com'>百度</a>";  // 设置内容
 |---------|--------------------------|---------|
 | [6.2 CSS 基础](./02-CSS基础.md) | | [6.4 jQuery 与 Ajax](./04-jQuery与Ajax.md) |
 
-*源码：[`web前端开发基础/JavaScript基础/`](../../web前端开发基础/JavaScript基础/)*
+*源码：[`web前端开发基础/JavaScript基础/`](https://github.com/Drgonmancer/Leo_code/tree/main/web前端开发基础/JavaScript基础)*

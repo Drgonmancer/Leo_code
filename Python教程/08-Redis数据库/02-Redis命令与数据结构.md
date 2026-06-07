@@ -35,7 +35,7 @@ flowchart LR
 | 去重与集合运算 | `sadd` `sinter` |
 | 排行榜 | `zadd` `zrevrange` |
 
-> 📂 本章对应源码：[Redis 完整命令手册.md](../../Redis数据库/Redis%20完整命令手册.md)
+> 📂 本章对应源码：[Redis 完整命令手册.md](https://github.com/Drgonmancer/Leo_code/blob/main/Redis数据库/Redis%20完整命令手册.md)
 
 ---
 
@@ -337,4 +337,4 @@ flowchart TD
 |---------|--------------------------|---------|
 | [8.1 NoSQL 与 Redis 入门](./01-NoSQL与Redis入门.md) | | [8.3 持久化与高可用](./03-持久化与高可用.md) |
 
-*源码：[`Redis数据库/Redis 完整命令手册.md`](../../Redis数据库/Redis%20完整命令手册.md)*
+*源码：[`Redis数据库/Redis 完整命令手册.md`](https://github.com/Drgonmancer/Leo_code/blob/main/Redis数据库/Redis%20完整命令手册.md)*

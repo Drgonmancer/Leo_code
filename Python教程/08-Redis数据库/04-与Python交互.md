@@ -34,7 +34,7 @@ flowchart LR
 | 管道批量操作 | `pipeline()` |
 | 事务与乐观锁 | `multi()` `watch()` |
 
-> 📂 本章对应源码：[与python交互.py](../../Redis数据库/与python交互.py)、[在Python 中使用事务和管道.md](../../Redis数据库/在Python%20中使用事务和管道.md)
+> 📂 本章对应源码：[与python交互.py](https://github.com/Drgonmancer/Leo_code/blob/main/Redis数据库/与python交互.py)、[在Python 中使用事务和管道.md](https://github.com/Drgonmancer/Leo_code/blob/main/Redis数据库/在Python%20中使用事务和管道.md)
 
 ---
 
@@ -363,4 +363,4 @@ print(cache.get_json('user:1001'))
 |---------|--------------------------|---------|
 | [8.3 持久化与高可用](./03-持久化与高可用.md) | | — |
 
-*源码：[`Redis数据库/`](../../Redis数据库/)*
+*源码：[`Redis数据库/`](https://github.com/Drgonmancer/Leo_code/tree/main/Redis数据库)*

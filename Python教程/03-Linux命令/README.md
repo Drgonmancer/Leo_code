@@ -13,4 +13,4 @@
 | 3.5 | Vim 编辑器 | [阅读](./05-Vim编辑器.md) |
 | 3.6 | 软件安装与卸载 | [阅读](./06-软件安装与卸载.md) |
 
-*源码：[`Linux命令/`](../../Linux命令/)*
+*源码：[`Linux命令/`](https://github.com/Drgonmancer/Leo_code/tree/main/Linux命令)*

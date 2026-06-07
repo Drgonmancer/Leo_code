@@ -314,4 +314,4 @@ graph TB
 |---------|--------------------------|---------|
 | [6.1 HTML 基础](./01-HTML基础.md) | | [6.3 JavaScript 基础](./03-JavaScript基础.md) |
 
-*源码：[`web前端开发基础/CSS基础/`](../../web前端开发基础/CSS基础/)*
+*源码：[`web前端开发基础/CSS基础/`](https://github.com/Drgonmancer/Leo_code/tree/main/web前端开发基础/CSS基础)*

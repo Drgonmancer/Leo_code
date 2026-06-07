@@ -34,7 +34,7 @@ flowchart LR
 | 读懂浏览器发出的请求 | 请求行、请求头、请求体 |
 | 构造服务器返回的响应 | 响应行、响应头、响应体 |
 
-> 📂 本章对应源码：[http协议介绍/](../../web服务器/http协议介绍/)
+> 📂 本章对应源码：[http协议介绍/](https://github.com/Drgonmancer/Leo_code/tree/main/web服务器/http协议介绍)
 
 ---
 
@@ -314,4 +314,4 @@ Chrome / Edge 开发者工具（F12）→ **Network（网络）** 面板可以�
 |---------|--------------------------|---------|
 | [4.1 网络编程基础](./01-网络编程基础.md) | | [4.3 静态 Web 服务器](./03-静态Web服务器.md) |
 
-*源码：[`web服务器/http协议介绍/`](../../web服务器/http协议介绍/)*
+*源码：[`web服务器/http协议介绍/`](https://github.com/Drgonmancer/Leo_code/tree/main/web服务器/http协议介绍)*

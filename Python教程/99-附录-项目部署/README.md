@@ -35,9 +35,9 @@ graph LR
 
 | 文档 | 路径 |
 |------|------|
-| 部署项目知识 | [`部署项目知识.md`](../../项目部署/部署项目知识.md) |
-| 项目部署流程指南 | [`项目部署流程指南.md`](../../项目部署/项目部署流程指南.md) |
-| Nginx 部署配置全教程 | [`Nginx 部署配置.md`](../../nginx/Nginx%20部署配置.md) |
+| 部署项目知识 | [`部署项目知识.md`](https://github.com/Drgonmancer/Leo_code/blob/main/项目部署/部署项目知识.md) |
+| 项目部署流程指南 | [`项目部署流程指南.md`](https://github.com/Drgonmancer/Leo_code/blob/main/项目部署/项目部署流程指南.md) |
+| Nginx 部署配置全教程 | [`Nginx 部署配置.md`](https://github.com/Drgonmancer/Leo_code/blob/main/nginx/Nginx%20部署配置.md) |
 
 ---
 

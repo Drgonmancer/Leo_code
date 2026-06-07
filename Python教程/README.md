@@ -151,4 +151,4 @@ flowchart LR
 
 ---
 
-*源码仓库：[`Leo_Python_NoteBook`](../)*
+*源码仓库：[`Leo_code`](https://github.com/Drgonmancer/Leo_code)*

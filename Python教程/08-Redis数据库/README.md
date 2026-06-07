@@ -21,4 +21,4 @@ flowchart LR
     style D fill:#c62828,color:#fff
 ```
 
-*源码：[`Redis数据库/`](../../Redis数据库/)*
+*源码：[`Redis数据库/`](https://github.com/Drgonmancer/Leo_code/tree/main/Redis数据库)*

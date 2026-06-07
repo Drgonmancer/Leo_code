@@ -362,4 +362,4 @@ flowchart LR
 |---------|--------------------------|---------|
 | [6.3 JavaScript 基础](./03-JavaScript基础.md) | | [第七章 MySQL](../07-MySQL数据库/README.md) |
 
-*源码：[`web前端开发基础/JQuery/`](../../web前端开发基础/JQuery/)*
+*源码：[`web前端开发基础/JQuery/`](https://github.com/Drgonmancer/Leo_code/tree/main/web前端开发基础/JQuery)*

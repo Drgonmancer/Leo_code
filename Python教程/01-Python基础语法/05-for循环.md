@@ -370,4 +370,4 @@ graph TB
 |---------|--------------------------|---------|
 | [1.4 while 循环](./04-while循环.md) | | [1.6 字符串](./06-字符串.md) |
 
-*源码：[`Python基础语法/5.for循环/`](../../Python基础语法/5.for循环/)*
+*源码：[`Python基础语法/5.for循环/`](https://github.com/Drgonmancer/Leo_code/tree/main/Python基础语法/5.for循环)*

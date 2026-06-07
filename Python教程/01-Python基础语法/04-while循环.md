@@ -406,4 +406,4 @@ graph LR
 |---------|--------------------------|---------|
 | [1.3 if 语句](./03-if语句.md) | | [1.5 for 循环](./05-for循环.md) |
 
-*源码：[`Python基础语法/4.while循坏/`](../../Python基础语法/4.while循坏/)*
+*源码：[`Python基础语法/4.while循坏/`](https://github.com/Drgonmancer/Leo_code/tree/main/Python基础语法/4.while循坏)*

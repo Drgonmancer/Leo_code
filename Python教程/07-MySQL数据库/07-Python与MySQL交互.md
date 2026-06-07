@@ -34,7 +34,7 @@ graph LR
 | 结果获取 | `fetchone()` `fetchall()` |
 | 防 SQL 注入 | 参数化 `%s` |
 
-> 📂 本章对应源码：[python与mysql交互/](../../MySQL数据库/python与mysql交互/)
+> 📂 本章对应源码：[python与mysql交互/](https://github.com/Drgonmancer/Leo_code/tree/main/MySQL数据库/python与mysql交互)
 
 ---
 
@@ -306,4 +306,4 @@ if __name__ == '__main__':
 |---------|--------------------------|---------|
 | [7.6 事务与索引](./06-事务与索引.md) | | — |
 
-*源码：[`MySQL数据库/python与mysql交互/`](../../MySQL数据库/python与mysql交互/)*
+*源码：[`MySQL数据库/python与mysql交互/`](https://github.com/Drgonmancer/Leo_code/tree/main/MySQL数据库/python与mysql交互)*

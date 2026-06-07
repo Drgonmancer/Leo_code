@@ -26,4 +26,4 @@ flowchart LR
     style E fill:#4CAF50,color:#fff
 ```
 
-*源码：[`Python面向对象编程/`](../../Python面向对象编程/)*
+*源码：[`Python面向对象编程/`](https://github.com/Drgonmancer/Leo_code/tree/main/Python面向对象编程)*

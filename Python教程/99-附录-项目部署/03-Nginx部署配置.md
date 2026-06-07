@@ -18,7 +18,7 @@ graph LR
     style F fill:#e65100,color:#fff
 ```
 
-> 📎 完整版请参阅：[`Nginx 部署配置.md`](../../nginx/Nginx%20部署配置.md)（含负载均衡、性能优化、安全加固）
+> 📎 完整版请参阅：[`Nginx 部署配置.md`](https://github.com/Drgonmancer/Leo_code/blob/main/nginx/Nginx%20部署配置.md)（含负载均衡、性能优化、安全加固）
 
 ---
 
@@ -362,7 +362,7 @@ server {
 1. 在本机安装 Nginx，部署一个含 CSS/JS 的静态网站
 2. 用 Nginx 反向代理到 `python -m http.server 8000`
 3. 配置静态资源 30 天缓存，用 F12 观察 `Cache-Control` 响应头
-4. 阅读 [`Nginx 部署配置.md`](../../nginx/Nginx%20部署配置.md) 中的性能优化和安全加固章节
+4. 阅读 [`Nginx 部署配置.md`](https://github.com/Drgonmancer/Leo_code/blob/main/nginx/Nginx%20部署配置.md) 中的性能优化和安全加固章节
 
 ---
 

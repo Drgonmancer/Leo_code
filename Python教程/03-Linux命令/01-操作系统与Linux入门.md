@@ -137,4 +137,4 @@ pwd
 |---------|--------------------------|---------|
 | [第二章 OOP](../02-Python面向对象编程/README.md) | | [3.2 基础命令](./02-Linux基础命令.md) |
 
-*源码：[`Linux命令/1.操作系统介绍`](../../Linux命令/1.操作系统介绍)*
+*源码：[`Linux命令/1.操作系统介绍`](https://github.com/Drgonmancer/Leo_code/tree/main/Linux命令/1.操作系统介绍)*

@@ -23,4 +23,4 @@
 | 1.15 | 内置高阶函数 | [阅读](./15-内置函数.md) |
 | 1.16 | 文件操作 | [阅读](./16-文件操作.md) |
 
-*源码：[`Python基础语法/`](../../Python基础语法/)*
+*源码：[`Python基础语法/`](https://github.com/Drgonmancer/Leo_code/tree/main/Python基础语法)*

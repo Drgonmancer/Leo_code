@@ -34,7 +34,7 @@ flowchart LR
 | 构造 HTTP 响应报文 | 响应行 + 响应头 + 响应体 |
 | 按路径返回不同文件 | `static` 目录 + 404 |
 
-> 📂 本章对应源码：[web服务器/](../../web服务器/web服务器/)
+> 📂 本章对应源码：[web服务器/](https://github.com/Drgonmancer/Leo_code/tree/main/web服务器/web服务器)
 
 ---
 
@@ -412,4 +412,4 @@ python server.py 9090
 |---------|--------------------------|---------|
 | [4.2 HTTP 协议](./02-HTTP协议.md) | | — |
 
-*源码：[`web服务器/web服务器/`](../../web服务器/web服务器/)*
+*源码：[`web服务器/web服务器/`](https://github.com/Drgonmancer/Leo_code/tree/main/web服务器/web服务器)*

@@ -306,4 +306,4 @@ sudo groupdel test
 |---------|--------------------------|---------|
 | [3.2 基础命令](./02-Linux基础命令.md) | | [3.4 远程登录](./04-远程登录.md) |
 
-*源码：[`Linux命令/3.Linux高级命令`](../../Linux命令/3.Linux高级命令)*
+*源码：[`Linux命令/3.Linux高级命令`](https://github.com/Drgonmancer/Leo_code/tree/main/Linux命令/3.Linux高级命令)*

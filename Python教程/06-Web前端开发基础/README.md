@@ -11,4 +11,4 @@
 | 6.3 | JavaScript 基础 | [阅读](./03-JavaScript基础.md) |
 | 6.4 | jQuery 与 Ajax | [阅读](./04-jQuery与Ajax.md) |
 
-*源码：[`web前端开发基础/`](../../web前端开发基础/)*
+*源码：[`web前端开发基础/`](https://github.com/Drgonmancer/Leo_code/tree/main/web前端开发基础)*

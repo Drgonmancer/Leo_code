@@ -34,7 +34,7 @@ flowchart LR
 | 掌握 MySQL 服务管理 | `service mysql`、配置文件 |
 | 使用命令行登录数据库 | `mysql -uroot -p` |
 
-> 📂 本章对应源码：[MySQL介绍/](../../MySQL数据库/MySQL介绍/)
+> 📂 本章对应源码：[MySQL介绍/](https://github.com/Drgonmancer/Leo_code/tree/main/MySQL数据库/MySQL介绍)
 
 ---
 
@@ -375,4 +375,4 @@ mysql --help
 |---------|--------------------------|---------|
 | — | | [7.2 数据库和表操作](./02-数据库和表操作.md) |
 
-*源码：[`MySQL数据库/MySQL介绍/`](../../MySQL数据库/MySQL介绍/)*
+*源码：[`MySQL数据库/MySQL介绍/`](https://github.com/Drgonmancer/Leo_code/tree/main/MySQL数据库/MySQL介绍)*

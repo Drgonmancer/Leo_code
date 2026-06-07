@@ -35,7 +35,7 @@ graph LR
 | 条件筛选数据 | `WHERE` |
 | 正则匹配 | `REGEXP` / `RLIKE` |
 
-> 📂 本章对应源码：[where条件查询/](../../MySQL数据库/where条件查询/)
+> 📂 本章对应源码：[where条件查询/](https://github.com/Drgonmancer/Leo_code/tree/main/MySQL数据库/where条件查询)
 
 ---
 
@@ -266,4 +266,4 @@ SELECT * FROM user_profile WHERE email REGEXP '^[a-zA-Z]';
 |---------|--------------------------|---------|
 | [7.2 数据库和表操作](./02-数据库和表操作.md) | | [7.4 高级查询](./04-高级查询.md) |
 
-*源码：[`MySQL数据库/where条件查询/`](../../MySQL数据库/where条件查询/)*
+*源码：[`MySQL数据库/where条件查询/`](https://github.com/Drgonmancer/Leo_code/tree/main/MySQL数据库/where条件查询)*

@@ -27,4 +27,4 @@ flowchart LR
     style G fill:#1565c0,color:#fff
 ```
 
-*源码：[`MySQL数据库/`](../../MySQL数据库/)*
+*源码：[`MySQL数据库/`](https://github.com/Drgonmancer/Leo_code/tree/main/MySQL数据库)*
