@@ -30,10 +30,18 @@
 <body>
   <div id="app">加载中...</div>
   <script>
+    // GitHub Pages 项目站部署在 /Leo_code/ 子路径，本地预览在根路径
+    (function () {
+      var repo = 'Leo_code';
+      var isGithubPages = location.hostname.indexOf('github.io') > -1;
+      window.__DOCSIFY_BASE__ = isGithubPages ? '/' + repo + '/' : '/';
+    })();
+
     window.$docsify = {
       name: 'Python 全栈入门教程',
-      nameLink: '/',
+      nameLink: window.__DOCSIFY_BASE__,
       repo: 'https://github.com/Drgonmancer/Leo_code',
+      basePath: window.__DOCSIFY_BASE__,
       relativePath: true,
       homepage: 'README.md',
       loadSidebar: true,
@@ -45,8 +53,8 @@
       mergeNavbar: true,
       maxLevel: 4,
       alias: {
-        '/.*/_sidebar.md': '/_sidebar.md',
-        '/.*/_navbar.md': '/_navbar.md'
+        '/.*/_sidebar.md': window.__DOCSIFY_BASE__ + '_sidebar.md',
+        '/.*/_navbar.md': window.__DOCSIFY_BASE__ + '_navbar.md'
       },
       search: {
         paths: 'auto',
